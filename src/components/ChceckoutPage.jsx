@@ -26,7 +26,7 @@ const CheckoutPage = () => {
     region: '',
     country: '',
     shippingMethod: 'Standard Delivery',
-    paymentMethod: 'EasyPaisa',
+    paymentMethod: 'jazzcash',
     promoCode: '',
     notes: '',
   });
@@ -82,8 +82,8 @@ const CheckoutPage = () => {
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
     }
-    // Clear the Base64 string if payment method changes from EasyPaisa
-    if (name === 'paymentMethod' && value !== 'EasyPaisa') {
+    // Clear the Base64 string if payment method changes from jazzcash
+    if (name === 'paymentMethod' && value !== 'jazzcash') {
       setBankTransferProofBase64(null);
     }
   };
@@ -125,8 +125,8 @@ const CheckoutPage = () => {
       newErrors.email = 'Please enter a valid email address';
     }
 
-    if (form.paymentMethod === 'EasyPaisa' && !bankTransferProofBase64) {
-      newErrors.bankTransferProof = 'Please upload a screenshot of your EasyPaisa transfer.';
+    if (form.paymentMethod === 'jazzcash' && !bankTransferProofBase64) {
+      newErrors.bankTransferProof = 'Please upload a screenshot of your jazzcash transfer.';
     }
 
     setErrors(newErrors);
@@ -182,7 +182,7 @@ const CheckoutPage = () => {
       total,
       createdAt: new Date(),
       status: 'processing',
-      bankTransferProofBase64: form.paymentMethod === 'EasyPaisa' ? bankTransferProofBase64 : null,
+      bankTransferProofBase64: form.paymentMethod === 'jazzcash' ? bankTransferProofBase64 : null,
     };
 
     try {
@@ -213,7 +213,7 @@ const CheckoutPage = () => {
     return (
       <>
         <Header />
-        <div className="min-h-screen bg-[#FFF5EE] py-8 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-[#F2DCC5] py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center py-16">
               <h1 className="text-3xl font-bold text-gray-900 mb-4">Your Cart is Empty</h1>
@@ -234,7 +234,7 @@ const CheckoutPage = () => {
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-[#FFF5EE] py-8 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-[#F2DCC5] py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Breadcrumbs */}
           <nav className="flex mb-8" aria-label="Breadcrumb">
@@ -383,7 +383,7 @@ const CheckoutPage = () => {
               <h2 className="text-lg sm:text-xl font-semibold mt-8 mb-6 pb-2 border-b">Payment Method</h2>
 
               <div className="space-y-4">
-                {['EasyPaisa', 'Cash on Delivery'].map(method => (
+                {['jazzcash', 'Cash on Delivery'].map(method => (
                   <label key={method} className="flex items-center p-4 border rounded-md hover:border-black cursor-pointer">
                     <input
                       type="radio"
@@ -398,22 +398,22 @@ const CheckoutPage = () => {
                 ))}
               </div>
 
-              {form.paymentMethod === 'EasyPaisa' && (
+              {form.paymentMethod === 'jazzcash' && (
                 <div className="mt-6 p-4 border border-blue-300 bg-blue-50 rounded-md">
-                  <h3 className="text-base sm:text-lg font-semibold mb-3">EasyPaisa Transfer Details</h3>
+                  <h3 className="text-base sm:text-lg font-semibold mb-3">jazzcash Transfer Details</h3>
                   <p className="text-gray-700 text-sm sm:text-base mb-4">
-                    Please transfer the total amount of PKR {total.toLocaleString()} to our EasyPaisa account:
+                    Please transfer the total amount of PKR {total.toLocaleString()} to our jazzcash account:
                   </p>
                   <ul className="list-disc list-inside text-gray-800 text-sm sm:text-base mb-4">
-                     <li><strong>Account Name:</strong> Maham </li>
-                    <li><strong>EasyPaisa Number:</strong> 03105816903</li>
+                    <li><strong>Account Name:</strong> Mahyen banat umar </li>
+                    <li><strong>jazzcash Number:</strong> 03002260369</li>
                   </ul>
                   <p className="text-gray-700 text-sm sm:text-base mb-4">
                     After making the transfer, please upload a screenshot of the transaction as proof of payment.
                   </p>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Upload EasyPaisa Transfer Screenshot*
+                      Upload jazzcash Transfer Screenshot*
                     </label>
                     <input
                       type="file"

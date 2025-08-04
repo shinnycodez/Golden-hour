@@ -5,14 +5,20 @@ const categories = [
     {
     id: 3,
     title: "Bracelets ˚⊹♡",
-    imageUrl: "https://scontent.flhe3-2.fna.fbcdn.net/v/t1.15752-9/521349181_737084372371080_7694854766131764488_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Fsv5uGhELl4Q7kNvwG_lAdO&_nc_oc=AdlYcUu20aZCwgodBLHx-MwgDblAqI5nnRiz5bmELqfX8JeL2d0ddTzNf9cA1x1jgv4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.flhe3-2.fna&oh=03_Q7cD2wHPdHHYuUKWZMnyDNGfJmoIh-195cqknxDBQhvyKSMC3A&oe=68AC0C82",
+    imageUrl: "https://scontent.flhe3-1.fna.fbcdn.net/v/t1.15752-9/525726381_1903376620457972_1981382405673860219_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=HHitoNNiSx8Q7kNvwFm60lb&_nc_oc=AdmvGNueyih2qgo-h18PlK4WwG7Yeb8biBa1DYdeaK2e5LLFUcaBsaCmUD2RokdQIMQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.flhe3-1.fna&oh=03_Q7cD3AEovTQi9Gs8lBlXHeWytzhLLjL8sMyDcNmAxktKEiKyCw&oe=68B8492F",
     link: "Bracelets"
+  },
+        {
+    id: 5,
+    title: "Necklaces ｡°✩",
+    imageUrl:"https://scontent.flhe3-2.fna.fbcdn.net/v/t1.15752-9/525345605_741309368892040_9071009789739616947_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=S1CdiutR2eAQ7kNvwHDktrO&_nc_oc=AdmHGDc4hCzG8R-Ex2iC7TDk5jyWBefkZWAZsKq6dLAxRd1FatpRSe13fROEMrSCh9E&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.flhe3-2.fna&oh=03_Q7cD3AHeho76gethz1XA5nqtKgayGXGQhNJDYI3wkSdlL-q__g&oe=68B81BC7",
+     link: "Necklaces"
   },
   {
     id: 1,
-    title: "Phone charms ⋆｡𖦹°",
-    imageUrl: "https://scontent.flhe7-1.fna.fbcdn.net/v/t1.15752-9/520909658_1678087256927900_4817397154280147514_n.jpg?stp=dst-jpg_s2048x2048_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=-cJamvM0wWoQ7kNvwHjic2W&_nc_oc=AdnGYSG0N4xGE4ybxYKUmZoZaAmTl8C9MNh-ZMSB5zXBe7lCtxIBwzfkg97-6AXqces&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.flhe7-1.fna&oh=03_Q7cD2wGwZvJHpstnpnrNbDdtQrq6BD6DgSYoi2l9j3Ow040fmQ&oe=68AC3F8B",
-      link: "Phone charms",
+    title: "charms ⋆｡𖦹°",
+    imageUrl: "https://scontent.flhe7-1.fna.fbcdn.net/v/t1.15752-9/525385164_2353479705054305_896651680661581963_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=1u22rtT0O4sQ7kNvwHj5PfJ&_nc_oc=Adkr3oqJvwMQBHwC3-dGpaVQ8DBkyru_yM3rxK263y1oBJ8O33saQX_rlE0HbyFaPds&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.flhe7-1.fna&oh=03_Q7cD3AEHj16_Qaslsy1LKX2SbYtDEbW8weaPbK5pbF_Oy0Bt_Q&oe=68B84416",
+      link: "charms",
   },
 
 
@@ -23,21 +29,22 @@ const categories = [
   // },
       {
     id: 2,
-    title: "keychains ˚⋆𐙚｡",
-    imageUrl: "https://scontent.flhe3-1.fna.fbcdn.net/v/t1.15752-9/521166975_734660132863062_8344427397155527878_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=_3dWxXDTf2AQ7kNvwH1m5H-&_nc_oc=AdkrOOuB66lOze65nVBUxtzwc30t81Apdwep51coHvlLCe3bNHXBtq_j8SyG158Us5Y&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.flhe3-1.fna&oh=03_Q7cD2wEBc-JVrARW0JcO0ob47QmdjD5VNbxweJm9gTI_uFcHdQ&oe=68AC460B",
-      link: "keychains"
+    title: "Earings ˚⋆𐙚｡",
+    imageUrl: "https://scontent.flhe3-2.fna.fbcdn.net/v/t1.15752-9/525024338_1482983156032925_1031801619945981844_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=gCzZVOGknIYQ7kNvwGUI9I0&_nc_oc=AdkRCI12kIGTek7SuSoVWGqhcZ7AAT3CxK_mL46urtlDnn-8dooGBYRSwNLebYw7fVM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.flhe3-2.fna&oh=03_Q7cD3AFJ8bfb5p0IrO4eRIVWzfYGBt4ieSuPzYdaFRu1gXKnqw&oe=68B81C7A",
+      link: "Earings"
   },
-      {
-    id: 5,
-    title: "Necklaces ｡°✩",
-    imageUrl:"https://scontent.flhe7-2.fna.fbcdn.net/v/t1.15752-9/520429125_1334742338219253_2531984894124566733_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=j7XYMWWmVY8Q7kNvwFYLOQX&_nc_oc=Adkef7qEPDIiflArvyMlAj0FTg2JoPnp6bRd6DV5GSZcJB7m97b8m8ZRWL8id8lVe1k&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.flhe7-2.fna&oh=03_Q7cD2wF-rY8Fqy79pbeR3ML53F8zqAW-4GruhgPAjdrVNB5Twg&oe=68AC16BF",
-     link: "Necklaces"
-  },
+
         {
     id: 5,
-    title: "Plushies / Trinkets ⋆⭒˚.⋆",
-    imageUrl:"https://scontent.flhe7-2.fna.fbcdn.net/v/t1.15752-9/525576846_1213728490767254_1766428545358139292_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=_BT1RcjUB3IQ7kNvwFYF7iA&_nc_oc=AdmwDteBLL-s_joZNncU601LCZdrCpmW9sspFevt0nLdtB0zgEHEY2eWI4KzhJbCsFs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.flhe7-2.fna&oh=03_Q7cD2wENRdhZhSmaPM4YuqQ0mVuzXHSDxRlf_BrAemBjvMfR3Q&oe=68B3D4B9",
-     link: "Plushies"
+    title: "Bags ⋆⭒˚.⋆",
+    imageUrl:"https://scontent.flhe7-2.fna.fbcdn.net/v/t1.15752-9/525031772_1459471468574303_3780443272747306948_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=CroguHdkfGMQ7kNvwFGsgvx&_nc_oc=Adnu_cI8CTYuzpw0_oiOELDfmtsYG0NcdFJs0Vp7yVtILEqpJojwS704OSsCw3ponOc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.flhe7-2.fna&oh=03_Q7cD3AG9eA0ZIBJgR-EPEFQPOsh6VlbTqLe-5AtlEIV_lJIfOQ&oe=68B84190",
+     link: "Bags"
+  },
+          {
+    id: 5,
+    title: "Rings ⋆⭒˚.⋆",
+    imageUrl:"https://scontent.flhe7-2.fna.fbcdn.net/v/t1.15752-9/527585629_1256178492658187_2432738701847868178_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=538zYwAIuSoQ7kNvwGFIbQn&_nc_oc=AdnhmGWOZILruwgZmTv--43gkIy8NLgyyzabvcfUEr8h6xH3_fvFxWvT6h9Nu3TGHec&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.flhe7-2.fna&oh=03_Q7cD3AG9Ic7ZJs88oAKy4W_SQ6E-MMLfMGaqpfwqdvX9qelh_g&oe=68B82C4C",
+     link: "Rings"
   },
   //       {
   //   id: 6,
