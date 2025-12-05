@@ -113,7 +113,7 @@ const CheckoutPage = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    const requiredFields = [ 'fullName', 'phone', 'address', 'city', 'country'];
+    const requiredFields = ['fullName', 'phone', 'address', 'city', 'country'];
     requiredFields.forEach(field => {
       if (!form[field]) {
         newErrors[field] = 'This field is required';
@@ -125,7 +125,8 @@ const CheckoutPage = () => {
       newErrors.email = 'Please enter a valid email address';
     }
 
-    if (form.paymentMethod === 'jazzcash' && !bankTransferProofBase64) {
+    // Since jazzcash is the only payment method now, always require bank transfer proof
+    if (!bankTransferProofBase64) {
       newErrors.bankTransferProof = 'Please upload a screenshot of your jazzcash transfer.';
     }
 
@@ -182,7 +183,7 @@ const CheckoutPage = () => {
       total,
       createdAt: new Date(),
       status: 'processing',
-      bankTransferProofBase64: form.paymentMethod === 'jazzcash' ? bankTransferProofBase64 : null,
+      bankTransferProofBase64: bankTransferProofBase64,
     };
 
     try {
@@ -383,60 +384,56 @@ const CheckoutPage = () => {
               <h2 className="text-lg sm:text-xl font-semibold mt-8 mb-6 pb-2 border-b">Payment Method</h2>
 
               <div className="space-y-4">
-                {['jazzcash', 'Cash on Delivery'].map(method => (
-                  <label key={method} className="flex items-center p-4 border rounded-md hover:border-black cursor-pointer">
-                    <input
-                      type="radio"
-                      name="paymentMethod"
-                      value={method}
-                      checked={form.paymentMethod === method}
-                      onChange={handleChange}
-                      className="h-4 w-4 text-black focus:ring-black border-gray-300"
-                    />
-                    <span className="ml-3 font-medium text-gray-900">{method}</span>
-                  </label>
-                ))}
+                <label className="flex items-center p-4 border rounded-md hover:border-black cursor-pointer">
+                  <input
+                    type="radio"
+                    name="paymentMethod"
+                    value="jazzcash"
+                    checked={form.paymentMethod === 'jazzcash'}
+                    onChange={handleChange}
+                    className="h-4 w-4 text-black focus:ring-black border-gray-300"
+                  />
+                  <span className="ml-3 font-medium text-gray-900">jazzcash</span>
+                </label>
               </div>
 
-              {form.paymentMethod === 'jazzcash' && (
-                <div className="mt-6 p-4 border border-blue-300 bg-blue-50 rounded-md">
-                  <h3 className="text-base sm:text-lg font-semibold mb-3">jazzcash Transfer Details</h3>
-                  <p className="text-gray-700 text-sm sm:text-base mb-4">
-                    Please transfer the total amount of PKR {total.toLocaleString()} to our jazzcash account:
-                  </p>
-                  <ul className="list-disc list-inside text-gray-800 text-sm sm:text-base mb-4">
-                    <li><strong>Account Name:</strong> Mahyen banat umar </li>
-                    <li><strong>jazzcash Number:</strong> 03002260369</li>
-                  </ul>
-                  <p className="text-gray-700 text-sm sm:text-base mb-4">
-                    After making the transfer, please upload a screenshot of the transaction as proof of payment.
-                  </p>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Upload jazzcash Transfer Screenshot*
-                    </label>
-                    <input
-                      type="file"
-                      accept="image/*"
-                      onChange={handleFileChange}
-                      className={`w-full px-4 py-2 border ${errors.bankTransferProof ? 'border-red-500' : 'border-gray-300'} rounded-md focus:ring-black focus:border-black`}
-                    />
-                    {errors.bankTransferProof && <p className="mt-1 text-sm text-red-600">{errors.bankTransferProof}</p>}
-                    {bankTransferProofBase64 && (
-                      <p className="mt-2 text-sm text-gray-600">Image selected and converted.</p>
-                    )}
-                    {convertingImage && (
-                      <p className="mt-2 text-sm text-gray-600 flex items-center">
-                        <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
-                        Converting image...
-                      </p>
-                    )}
-                  </div>
+              <div className="mt-6 p-4 border border-blue-300 bg-blue-50 rounded-md">
+                <h3 className="text-base sm:text-lg font-semibold mb-3">jazzcash Transfer Details</h3>
+                <p className="text-gray-700 text-sm sm:text-base mb-4">
+                  Please transfer the total amount of PKR {total.toLocaleString()} to our jazzcash account:
+                </p>
+                <ul className="list-disc list-inside text-gray-800 text-sm sm:text-base mb-4">
+                  <li><strong>Account Name:</strong> Mahyen banat umar </li>
+                  <li><strong>jazzcash Number:</strong> 03002260369</li>
+                </ul>
+                <p className="text-gray-700 text-sm sm:text-base mb-4">
+                  After making the transfer, please upload a screenshot of the transaction as proof of payment.
+                </p>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Upload jazzcash Transfer Screenshot*
+                  </label>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={handleFileChange}
+                    className={`w-full px-4 py-2 border ${errors.bankTransferProof ? 'border-red-500' : 'border-gray-300'} rounded-md focus:ring-black focus:border-black`}
+                  />
+                  {errors.bankTransferProof && <p className="mt-1 text-sm text-red-600">{errors.bankTransferProof}</p>}
+                  {bankTransferProofBase64 && (
+                    <p className="mt-2 text-sm text-gray-600">Image selected and converted.</p>
+                  )}
+                  {convertingImage && (
+                    <p className="mt-2 text-sm text-gray-600 flex items-center">
+                      <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Converting image...
+                    </p>
+                  )}
                 </div>
-              )}
+              </div>
 
               <div className="mt-6">
                 <label className="block text-sm font-medium text-gray-700 mb-1">Promo Code</label>
@@ -559,7 +556,6 @@ const CheckoutPage = () => {
 
               <div className="mt-6 text-center text-xs sm:text-sm text-gray-500">
                 <p>100% secure checkout</p>
-
               </div>
             </div>
           </div>
