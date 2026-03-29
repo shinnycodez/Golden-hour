@@ -46,6 +46,36 @@ const categories = [
     imageUrl:"https://pbs.twimg.com/media/GzsnOIpXsAEdTyR?format=jpg&name=small",
      link: "Rings"
   },
+              {
+    id: 5,
+    title: "Handcuffs ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/HEnbqqIaQAAxNq9?format=jpg&name=small",
+     link: "Handcuffs"
+  },
+                 {
+    id: 5,
+    title: "Handchains ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/HEnbwz_aYAAltob?format=jpg&name=small",
+     link: "Handchains"
+  },
+                     {
+    id: 5,
+    title: "Handchains ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/HEnbwz_aYAAltob?format=jpg&name=small",
+     link: "Handchains"
+  },
+                         {
+    id: 5,
+    title: "Glasses chains ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/HEnbzB5aYAA6RRZ?format=jpg&name=small",
+     link: "Glasses chains"
+  },
+                      {
+    id: 5,
+    title: "sets ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/HEnb2Iib0AAN2j3?format=jpg&name=medium",
+     link: "sets"
+  },
   //       {
   //   id: 6,
   //   title: "Bag charms",
