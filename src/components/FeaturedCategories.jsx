@@ -52,12 +52,7 @@ const categories = [
     imageUrl:"https://pbs.twimg.com/media/HEnbqqIaQAAxNq9?format=jpg&name=small",
      link: "Handcuffs"
   },
-                 {
-    id: 5,
-    title: "Handchains ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/HEnbwz_aYAAltob?format=jpg&name=small",
-     link: "Handchains"
-  },
+
                      {
     id: 5,
     title: "Handchains ⋆⭒˚.⋆",
